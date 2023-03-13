@@ -512,6 +512,6 @@ ns:structure a qb:DataStructureDefinition ;
 
 nsr:dataCubeInstance a qb:DataSet ;
     qb:structure ns:structure ;
-    skos:prefLabel "Mean population"@en,
-        "Střední stav obyvatel"@en .
+    skos:prefLabel "Střední stav obyvatel"@cs,
+        "Mean population"@en .
 

@@ -34,7 +34,7 @@ def create_dataset(collector: Graph, structure):
     collector.add((dataset, RDF.type, QB.DataSet))
     collector.add((dataset, SKOS.prefLabel, Literal("Mean population", lang="en")))
     
-    collector.add((dataset, SKOS.prefLabel, Literal("Střední stav obyvatel", lang="en")))
+    collector.add((dataset, SKOS.prefLabel, Literal("Střední stav obyvatel", lang="cs")))
     collector.add((dataset, QB.structure, structure))
 
     return dataset

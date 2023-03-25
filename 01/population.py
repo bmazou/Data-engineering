@@ -1,6 +1,6 @@
 import population_loader, validator, utils
 
-from rdflib import Graph, BNode, Literal, Namespace
+from rdflib import Graph, BNode, Literal, Namespace, URIRef
 from rdflib.namespace import QB, RDF, XSD
 
 SDMX_CONCEPT = Namespace("http://purl.org/linked-data/sdmx/2009/concept#")
@@ -11,7 +11,8 @@ NS = Namespace("http://example.org/ns/")
 NSR = Namespace("http://example.org/nsr/")
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
-
+KRAJ = Namespace("http://ruian.linked.opendata.cz/resource/region/")
+OKRES = Namespace("http://ruian.linked.opendata.cz/resource/okres/")
 
 def create_dimensions(collector: Graph):
     return utils.create_okres_kraj(collector)
@@ -32,10 +33,18 @@ def create_measure(collector: Graph):
 def create_dataset(collector: Graph, structure):
     dataset = NSR.dataCubeInstance
     collector.add((dataset, RDF.type, QB.DataSet))
-    collector.add((dataset, SKOS.prefLabel, Literal("Mean population", lang="en")))
-    
-    collector.add((dataset, SKOS.prefLabel, Literal("Střední stav obyvatel", lang="cs")))
     collector.add((dataset, QB.structure, structure))
+    
+    utils.add_metadata(collector,
+                        "Mean population",
+                        "Střední stav obyvatel",
+                        "Mean population of czech counties and regions", 
+                        "Střední stav obyvatel okrsků a krajů",
+                        "Mean population, depending on the county and region",
+                        "Střední stav obyvatel, v závislosti na okrese a kraji",
+                        "Population",
+                        "Populace")
+    
 
     return dataset
 
@@ -50,29 +59,13 @@ def create_observation(collector: Graph, dataset, g, dimension, count):
     collector.add((g, RDF.type, QB.Observation))
     collector.add((g, QB.dataSet, dataset))
     
-    okres, kraj = dimension.split("---")
-    collector.add((g, NS.okres, Literal(okres)))
-    collector.add((g, NS.kraj, Literal(kraj)))
     collector.add((g, NS.mean_population, Literal(count, datatype=XSD.integer)))
 
-def add_metadata(collector: Graph):
-    utils.add_shared_metadata(collector)
-    
-    # Add dct:title
-    collector.add((NSR.data, DCT.title, Literal("Mean population of czech counties and regions", lang="en")))
-    collector.add((NSR.data, DCT.title, Literal("Střední stav obyvatel okrsků a krajů", lang="cs")))
-    
-    # Add dct:label
-    collector.add((NSR.data, DCT.label, Literal("Mean population of czech counties and regions", lang="en")))
-    collector.add((NSR.data, DCT.label, Literal("Střední stav obyvatel okrsků a krajů", lang="cs")))
-    
-    # Add dct:description
-    collector.add((NSR.data, DCT.description, Literal("Mean population, depending on the county and region", lang="en")))
-    collector.add((NSR.data, DCT.description, Literal("Střední stav obyvatel, v závislosti na okrese a kraji", lang="cs")))
-    
-    # Add dct:comment
-    collector.add((NSR.data, DCT.comment, Literal("Mean population, depending on the county and region", lang="en")))
-    collector.add((NSR.data, DCT.comment, Literal("Střední stav obyvatel, v závislosti na okrese a kraji", lang="cs")))
+    okres, kraj = dimension.split("---")
+    kraj_iri = KRAJ[kraj]
+    okres_iri = OKRES[okres]
+    collector.add((g, NS.kraj, URIRef(kraj_iri)))
+    collector.add((g, NS.okres, URIRef(okres_iri)))
 
 
 def as_data_cube(data):
@@ -82,7 +75,6 @@ def as_data_cube(data):
     structure = utils.create_structure(g, dimensions, measures)
     dataset = create_dataset(g, structure)
     create_observations(g, dataset, data)
-    add_metadata(g)
     utils.bind_namespaces(g)
     
     return g

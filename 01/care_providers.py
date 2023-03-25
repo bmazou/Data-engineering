@@ -1,6 +1,6 @@
 # from validator import Validator
 import care_providers_loader, validator, utils
-from rdflib import Graph, BNode, Literal, Namespace
+from rdflib import Graph, BNode, Literal, Namespace, URIRef
 from rdflib.namespace import QB, RDF, XSD
 
 SDMX_CONCEPT = Namespace("http://purl.org/linked-data/sdmx/2009/concept#")
@@ -11,6 +11,8 @@ NS = Namespace("http://example.org/ns/")
 NSR = Namespace("http://example.org/nsr/")
 RDFS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
+KRAJ = Namespace("http://ruian.linked.opendata.cz/resource/region/")
+OKRES = Namespace("http://ruian.linked.opendata.cz/resource/okres/")
 
 
 def create_dimensions(collector: Graph):
@@ -41,10 +43,17 @@ def create_measure(collector: Graph):
 def create_dataset(collector: Graph, structure):
     dataset = NSR.dataCubeInstance
     collector.add((dataset, RDF.type, QB.DataSet))
-    collector.add((dataset, SKOS.prefLabel, Literal("Počet poskytovatelů péče v daném okrese a kraji", lang="en")))
-    
-    collector.add((dataset, SKOS.prefLabel, Literal("Number of care providers in a given county and region", lang="en")))
     collector.add((dataset, QB.structure, structure))
+
+    utils.add_metadata(collector, 
+                        "Number of care providers in a given county and region",
+                        "Počet poskytovatelů péče v daném okrese a kraji",
+                        "Number of care providers",
+                        "Počet poskytovatelů péče",
+                        "Number of given care providers in each county and region of the Czech republic",
+                        "Počet daných poskytovatelů péče v jednotlivých okresech a krajích ČR",
+                        "Care providers",
+                        "Poskytovatelé péče")
 
     return dataset
 
@@ -60,29 +69,14 @@ def create_observation(collector: Graph, dataset, g, dimension, count):
     collector.add((g, QB.dataSet, dataset))
     
     okres, kraj, obor_pece = dimension.split("---")
-    collector.add((g, NS.okres, Literal(okres)))
-    collector.add((g, NS.kraj, Literal(kraj)))
     collector.add((g, NS.obor_pece, Literal(obor_pece)))
-    collector.add((g, NS.pocet, Literal(count, datatype=XSD.integer)))
+    
+    kraj_iri = KRAJ[kraj]
+    okres_iri = OKRES[okres]
+    collector.add((g, NS.kraj, URIRef(kraj_iri)))
+    collector.add((g, NS.okres, URIRef(okres_iri)))
 
-def add_metadata(collector: Graph):
-    utils.add_shared_metadata(collector)
-    
-    # Add dct:title
-    collector.add((NSR.data, DCT.title, Literal("Počet poskytovatelů péče", lang="cs")))
-    collector.add((NSR.data, DCT.title, Literal("Number of care providers", lang="en")))
-    
-    # Add dct:label
-    collector.add((NSR.data, RDFS.label, Literal("Počet poskytovatelů péče", lang="cs")))
-    collector.add((NSR.data, RDFS.label, Literal("Number of care providers", lang="en")))
-    
-    # Add dct:description
-    collector.add((NSR.data, DCT.description, Literal("Počet daných poskytovatelů péče v jednotlivých okresech a krajích ČR", lang="cs")))
-    collector.add((NSR.data, DCT.description, Literal("Number of given care providers in each county and region of the Czech Republic", lang="en")))
-    
-    # Add dct:comment
-    collector.add((NSR.data, RDFS.comment, Literal("Počet daných poskytovatelů péče v jednotlivých okresech a krajích ČR", lang="cs")))
-    collector.add((NSR.data, RDFS.comment, Literal("Number of given care providers in each county and region of the Czech Republic", lang="en")))
+    collector.add((g, NS.pocet, Literal(count, datatype=XSD.integer)))
 
 def as_data_cube(data):
     g = Graph()
@@ -91,7 +85,6 @@ def as_data_cube(data):
     structure = utils.create_structure(g, dimensions, measures)
     dataset = create_dataset(g, structure)
     create_observations(g, dataset, data)
-    add_metadata(g)
     utils.bind_namespaces(g)
     
     return g

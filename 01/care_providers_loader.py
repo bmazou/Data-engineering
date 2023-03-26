@@ -17,11 +17,16 @@ def count_obor_pece(data):
         if row["OborPece"] == "": 
             continue
         
-        dimension = f'{row["OkresCode"]}---{row["KrajCode"]}---{row["OborPece"]}'
-        if dimension in result:
-            result[dimension] += 1
-        else:
-            result[dimension] = 1
+        obory = [obor.strip().lower() for obor in row["OborPece"].split(",")]
+        # Filter out duplicates
+        obory = list(set(obory))
+        
+        for obor in obory:
+            dimension = f'{row["OkresCode"]}---{row["KrajCode"]}---{obor}'
+            if dimension in result:
+                result[dimension] += 1
+            else:
+                result[dimension] = 1
             
     return result
       

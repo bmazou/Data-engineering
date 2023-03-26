@@ -469,7 +469,7 @@ nsr:observation-075 a qb:Observation ;
 ns:kraj a qb:DimensionProperty,
         rdfs:Property ;
     qb:concept sdmx-concept:refArea ;
-    rdfs:range xsd:string ;
+    rdfs:range kraj:region ;
     rdfs:subPropertyOf sdmx-dimension:refArea ;
     skos:prefLabel "CZ-NUTS kód kraje"@cs,
         "CZ-NUTS code of region"@en .
@@ -484,14 +484,14 @@ ns:mean_population a qb:MeasureProperty,
 ns:okres a qb:DimensionProperty,
         rdfs:Property ;
     qb:concept sdmx-concept:refArea ;
-    rdfs:range xsd:string ;
+    rdfs:range okres:county ;
     rdfs:subPropertyOf sdmx-dimension:refArea ;
     skos:prefLabel "CZ-NUTS kód okresu"@cs,
         "CZ-NUTS code of county"@en .
 
 ns:structure a qb:DataStructureDefinition ;
-    qb:component [ qb:dimension ns:okres ],
-        [ qb:measure ns:mean_population ],
+    qb:component [ qb:measure ns:mean_population ],
+        [ qb:dimension ns:okres ],
         [ qb:dimension ns:kraj ] .
 
 nsr:dataCubeInstance a qb:DataSet ;
@@ -499,11 +499,11 @@ nsr:dataCubeInstance a qb:DataSet ;
         "Mean population, depending on the county and region"@en ;
     dct:description "Střední stav obyvatel, v závislosti na okrese a kraji"@cs,
         "Mean population, depending on the county and region"@en ;
-    dct:issued "2023-03-25"^^xsd:date ;
+    dct:issued "2023-03-26"^^xsd:date ;
     dct:label "Střední stav obyvatel okrsků a krajů"@cs,
         "Mean population of czech counties and regions"@en ;
     dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    dct:modified "2023-03-25"^^xsd:date ;
+    dct:modified "2023-03-26"^^xsd:date ;
     dct:publisher nsr:czech_statistical_organization ;
     dct:source "Český statistický úřad"@cs,
         "Czech Statistical Office"@en ;

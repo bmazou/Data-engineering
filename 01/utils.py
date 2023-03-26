@@ -52,7 +52,7 @@ def create_okres_kraj(collector: Graph):
     collector.add((okres, RDFS.subPropertyOf, SDMX_DIMENSION.refArea))
     collector.add((okres, SKOS.prefLabel, Literal("CZ-NUTS kód okresu", lang="cs")))
     collector.add((okres, SKOS.prefLabel, Literal("CZ-NUTS code of county", lang="en")))
-    collector.add((okres, RDFS.range, XSD.string))
+    collector.add((okres, RDFS.range, OKRES.county))
     collector.add((okres, QB.concept, SDMX_CONCEPT.refArea))
     
     kraj = NS.kraj
@@ -61,7 +61,7 @@ def create_okres_kraj(collector: Graph):
     collector.add((kraj, RDFS.subPropertyOf, SDMX_DIMENSION.refArea))
     collector.add((kraj, SKOS.prefLabel, Literal("CZ-NUTS kód kraje", lang="cs")))
     collector.add((kraj, SKOS.prefLabel, Literal("CZ-NUTS code of region", lang="en")))
-    collector.add((kraj, RDFS.range, XSD.string))
+    collector.add((kraj, RDFS.range, KRAJ.region))
     collector.add((kraj, QB.concept, SDMX_CONCEPT.refArea))
 
     return [okres, kraj]

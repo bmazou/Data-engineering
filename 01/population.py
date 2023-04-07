@@ -31,11 +31,12 @@ def create_measure(collector: Graph):
 
 
 def create_dataset(collector: Graph, structure):
-    dataset = NSR.dataCubeInstance
+    dataset = NSR.populationDataCube
     collector.add((dataset, RDF.type, QB.DataSet))
     collector.add((dataset, QB.structure, structure))
     
     utils.add_metadata(collector,
+                        dataset,
                         "Mean population",
                         "Střední stav obyvatel",
                         "Mean population of czech counties and regions", 

@@ -60,11 +60,12 @@ def create_measure(collector: Graph):
     return [pocet]
 
 def create_dataset(collector: Graph, structure):
-    dataset = NSR.dataCubeInstance
+    dataset = NSR.careProvidersDataCube
     collector.add((dataset, RDF.type, QB.DataSet))
     collector.add((dataset, QB.structure, structure))
 
     utils.add_metadata(collector, 
+                        dataset,
                         "Number of care providers in a given county and region",
                         "Počet poskytovatelů péče v daném okrese a kraji",
                         "Number of care providers",

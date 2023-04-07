@@ -67,49 +67,49 @@ def create_okres_kraj(collector: Graph):
     return [okres, kraj]
 
 
-def add_metadata(collector: Graph, en_prefLabel, cz_prefLabel, en_title, cz_title, en_description, cz_description, en_subject, cz_subject):
+def add_metadata(collector: Graph, data_cube_instance, en_prefLabel, cz_prefLabel, en_title, cz_title, en_description, cz_description, en_subject, cz_subject):
     # Add skos:prefLabel
-    collector.add((NSR.dataCubeInstance, SKOS.prefLabel, Literal(en_prefLabel, lang="en")))
-    collector.add((NSR.dataCubeInstance, SKOS.prefLabel, Literal(cz_prefLabel, lang="cs")))
+    collector.add((data_cube_instance, SKOS.prefLabel, Literal(en_prefLabel, lang="en")))
+    collector.add((data_cube_instance, SKOS.prefLabel, Literal(cz_prefLabel, lang="cs")))
 
     # Add dct:issued
     import datetime
     now = datetime.datetime.now().strftime("%Y-%m-%d")
-    collector.add((NSR.dataCubeInstance, DCT.issued, Literal(now, datatype=XSD.date)))
+    collector.add((data_cube_instance, DCT.issued, Literal(now, datatype=XSD.date)))
 
     # Add dct:modified
-    collector.add((NSR.dataCubeInstance, DCT.modified, Literal(now, datatype=XSD.date)))
+    collector.add((data_cube_instance, DCT.modified, Literal(now, datatype=XSD.date)))
     
     # Add dct:publisher
-    collector.add((NSR.dataCubeInstance, DCT.publisher, NSR.czech_statistical_organization))
+    collector.add((data_cube_instance, DCT.publisher, NSR.czech_statistical_organization))
 
     # Add dct:source
-    collector.add((NSR.dataCubeInstance, DCT.source, Literal("Český statistický úřad", lang="cs")))
-    collector.add((NSR.dataCubeInstance, DCT.source, Literal("Czech Statistical Office", lang="en")))
+    collector.add((data_cube_instance, DCT.source, Literal("Český statistický úřad", lang="cs")))
+    collector.add((data_cube_instance, DCT.source, Literal("Czech Statistical Office", lang="en")))
 
     # Add dct:license
-    collector.add((NSR.dataCubeInstance, DCT.license, Literal("https://creativecommons.org/licenses/by/4.0/", datatype=XSD.anyURI)))
+    collector.add((data_cube_instance, DCT.license, Literal("https://creativecommons.org/licenses/by/4.0/", datatype=XSD.anyURI)))
     
     
     # Add dct:subject
-    collector.add((NSR.dataCubeInstance, DCT.subject, Literal(en_subject, lang="en")))
-    collector.add((NSR.dataCubeInstance, DCT.subject, Literal(cz_subject, lang="cs")))
+    collector.add((data_cube_instance, DCT.subject, Literal(en_subject, lang="en")))
+    collector.add((data_cube_instance, DCT.subject, Literal(cz_subject, lang="cs")))
         
     # Add dct:title
-    collector.add((NSR.dataCubeInstance, DCT.title, Literal(en_title, lang="en")))
-    collector.add((NSR.dataCubeInstance, DCT.title, Literal(cz_title, lang="cs")))
+    collector.add((data_cube_instance, DCT.title, Literal(en_title, lang="en")))
+    collector.add((data_cube_instance, DCT.title, Literal(cz_title, lang="cs")))
     
     # Add dct:label
-    collector.add((NSR.dataCubeInstance, DCT.label, Literal(en_title, lang="en")))
-    collector.add((NSR.dataCubeInstance, DCT.label, Literal(cz_title, lang="cs")))
+    collector.add((data_cube_instance, DCT.label, Literal(en_title, lang="en")))
+    collector.add((data_cube_instance, DCT.label, Literal(cz_title, lang="cs")))
 
     # Add dct:description
-    collector.add((NSR.dataCubeInstance, DCT.description, Literal(en_description, lang="en")))
-    collector.add((NSR.dataCubeInstance, DCT.description, Literal(cz_description, lang="cs")))
+    collector.add((data_cube_instance, DCT.description, Literal(en_description, lang="en")))
+    collector.add((data_cube_instance, DCT.description, Literal(cz_description, lang="cs")))
     
     # Add dct:comment
-    collector.add((NSR.dataCubeInstance, DCT.comment, Literal(en_description, lang="en")))
-    collector.add((NSR.dataCubeInstance, DCT.comment, Literal(cz_description, lang="cs")))
+    collector.add((data_cube_instance, DCT.comment, Literal(en_description, lang="en")))
+    collector.add((data_cube_instance, DCT.comment, Literal(cz_description, lang="cs")))
     
 
 def save_data_cube(data_cube, path):

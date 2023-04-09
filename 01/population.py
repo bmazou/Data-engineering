@@ -31,7 +31,7 @@ def create_measure(collector: Graph):
 
 
 def create_dataset(collector: Graph, structure):
-    dataset = NSR.populationDataCube
+    dataset = NSR.PopulationDataCube
     collector.add((dataset, RDF.type, QB.DataSet))
     collector.add((dataset, QB.structure, structure))
     
@@ -84,7 +84,7 @@ def as_data_cube(data):
 def main():
     data = population_loader.load_data("data/pohyb-obyvatel.csv")
     data_cube = as_data_cube(data)
-    # utils.save_data_cube(data_cube, "output/population.ttl")
+    utils.save_data_cube(data_cube, "output/population.ttl")
     
     validator.check_integrity(data_cube)
 

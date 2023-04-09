@@ -14,457 +14,457 @@ nsr:observation-000 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 116930 ;
     ns:okres okres:CZ0427 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-001 a qb:Observation ;
     ns:kraj kraj:CZ052 ;
     ns:mean_population 78479 ;
     ns:okres okres:CZ0524 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-002 a qb:Observation ;
     ns:kraj kraj:CZ051 ;
     ns:mean_population 71593 ;
     ns:okres okres:CZ0514 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-003 a qb:Observation ;
     ns:kraj kraj:CZ052 ;
     ns:mean_population 78763 ;
     ns:okres okres:CZ0522 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-004 a qb:Observation ;
     ns:kraj kraj:CZ053 ;
     ns:mean_population 103657 ;
     ns:okres okres:CZ0531 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-005 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 378424 ;
     ns:okres okres:CZ0642 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-006 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 114758 ;
     ns:okres okres:CZ0644 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-007 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 100584 ;
     ns:okres okres:CZ0208 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-008 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 91984 ;
     ns:okres okres:CZ0646 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-009 a qb:Observation ;
     ns:kraj kraj:CZ071 ;
     ns:mean_population 107697 ;
     ns:okres okres:CZ0713 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-010 a qb:Observation ;
     ns:kraj kraj:CZ071 ;
     ns:mean_population 126826 ;
     ns:okres okres:CZ0714 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-011 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 84661 ;
     ns:okres okres:CZ0322 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-012 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 48587 ;
     ns:okres okres:CZ0326 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-013 a qb:Observation ;
     ns:kraj kraj:CZ041 ;
     ns:mean_population 88030 ;
     ns:okres okres:CZ0411 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-014 a qb:Observation ;
     ns:kraj kraj:CZ072 ;
     ns:mean_population 140392 ;
     ns:okres okres:CZ0723 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-015 a qb:Observation ;
     ns:kraj kraj:CZ072 ;
     ns:mean_population 188947 ;
     ns:okres okres:CZ0724 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-016 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 108889 ;
     ns:okres okres:CZ0206 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-017 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 186558 ;
     ns:okres okres:CZ0209 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-018 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 54767 ;
     ns:okres okres:CZ020C ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-019 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 70582 ;
     ns:okres okres:CZ0314 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-020 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 187985 ;
     ns:okres okres:CZ0323 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-021 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 126492 ;
     ns:okres okres:CZ0421 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-022 a qb:Observation ;
     ns:kraj kraj:CZ052 ;
     ns:mean_population 162193 ;
     ns:okres okres:CZ0521 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-023 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 212422 ;
     ns:okres okres:CZ0802 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-024 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 60033 ;
     ns:okres okres:CZ0312 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-025 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 80228 ;
     ns:okres okres:CZ0325 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-026 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 95823 ;
     ns:okres okres:CZ0202 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-027 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 127221 ;
     ns:okres okres:CZ0207 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-028 a qb:Observation ;
     ns:kraj kraj:CZ071 ;
     ns:mean_population 36884 ;
     ns:okres okres:CZ0711 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-029 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 75402 ;
     ns:okres okres:CZ0205 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-030 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 99008 ;
     ns:okres okres:CZ0201 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-031 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 149990 ;
     ns:okres okres:CZ020A ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-032 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 114060 ;
     ns:okres okres:CZ020B ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-033 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 194994 ;
     ns:okres okres:CZ0311 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-034 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 50225 ;
     ns:okres okres:CZ0315 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-035 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 89906 ;
     ns:okres okres:CZ0801 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-036 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 149907 ;
     ns:okres okres:CZ0804 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-037 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 312908 ;
     ns:okres okres:CZ0806 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-038 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 89325 ;
     ns:okres okres:CZ0313 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-039 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 54313 ;
     ns:okres okres:CZ0321 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-040 a qb:Observation ;
     ns:kraj kraj:CZ041 ;
     ns:mean_population 110195 ;
     ns:okres okres:CZ0412 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-041 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 68623 ;
     ns:okres okres:CZ0324 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-042 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 117473 ;
     ns:okres okres:CZ0423 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-043 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 124401 ;
     ns:okres okres:CZ0426 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-044 a qb:Observation ;
     ns:kraj kraj:CZ053 ;
     ns:mean_population 135977 ;
     ns:okres okres:CZ0534 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-045 a qb:Observation ;
     ns:kraj kraj:CZ051 ;
     ns:mean_population 101997 ;
     ns:okres okres:CZ0511 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-046 a qb:Observation ;
     ns:kraj kraj:CZ051 ;
     ns:mean_population 173337 ;
     ns:okres okres:CZ0513 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-047 a qb:Observation ;
     ns:kraj kraj:CZ052 ;
     ns:mean_population 108092 ;
     ns:okres okres:CZ0523 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-048 a qb:Observation ;
     ns:kraj kraj:CZ052 ;
     ns:mean_population 115365 ;
     ns:okres okres:CZ0525 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-049 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 113389 ;
     ns:okres okres:CZ0647 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-050 a qb:Observation ;
     ns:kraj kraj:CZ063 ;
     ns:mean_population 93521 ;
     ns:okres okres:CZ0631 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-051 a qb:Observation ;
     ns:kraj kraj:CZ053 ;
     ns:mean_population 171461 ;
     ns:okres okres:CZ0532 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-052 a qb:Observation ;
     ns:kraj kraj:CZ063 ;
     ns:mean_population 109373 ;
     ns:okres okres:CZ0634 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-053 a qb:Observation ;
     ns:kraj kraj:CZ071 ;
     ns:mean_population 118618 ;
     ns:okres okres:CZ0715 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-054 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 103345 ;
     ns:okres okres:CZ0204 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-055 a qb:Observation ;
     ns:kraj kraj:CZ063 ;
     ns:mean_population 71457 ;
     ns:okres okres:CZ0633 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-056 a qb:Observation ;
     ns:kraj kraj:CZ063 ;
     ns:mean_population 117181 ;
     ns:okres okres:CZ0635 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-057 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 107795 ;
     ns:okres okres:CZ0641 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-058 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 151344 ;
     ns:okres okres:CZ0645 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-059 a qb:Observation ;
     ns:kraj kraj:CZ053 ;
     ns:mean_population 102799 ;
     ns:okres okres:CZ0533 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-060 a qb:Observation ;
     ns:kraj kraj:CZ063 ;
     ns:mean_population 112206 ;
     ns:okres okres:CZ0632 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-061 a qb:Observation ;
     ns:kraj kraj:CZ064 ;
     ns:mean_population 224794 ;
     ns:okres okres:CZ0643 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-062 a qb:Observation ;
     ns:kraj kraj:CZ072 ;
     ns:mean_population 139922 ;
     ns:okres okres:CZ0722 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-063 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 241184 ;
     ns:okres okres:CZ0803 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-064 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 69794 ;
     ns:okres okres:CZ0316 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-065 a qb:Observation ;
     ns:kraj kraj:CZ071 ;
     ns:mean_population 233661 ;
     ns:okres okres:CZ0712 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-066 a qb:Observation ;
     ns:kraj kraj:CZ072 ;
     ns:mean_population 103753 ;
     ns:okres okres:CZ0721 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-067 a qb:Observation ;
     ns:kraj kraj:CZ080 ;
     ns:mean_population 173853 ;
     ns:okres okres:CZ0805 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-068 a qb:Observation ;
     ns:kraj kraj:CZ020 ;
     ns:mean_population 164359 ;
     ns:okres okres:CZ0203 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-069 a qb:Observation ;
     ns:kraj kraj:CZ041 ;
     ns:mean_population 85452 ;
     ns:okres okres:CZ0413 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-070 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 121643 ;
     ns:okres okres:CZ0422 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-071 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 107090 ;
     ns:okres okres:CZ0425 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-072 a qb:Observation ;
     ns:kraj kraj:CZ031 ;
     ns:mean_population 101333 ;
     ns:okres okres:CZ0317 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-073 a qb:Observation ;
     ns:kraj kraj:CZ051 ;
     ns:mean_population 90204 ;
     ns:okres okres:CZ0512 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-074 a qb:Observation ;
     ns:kraj kraj:CZ032 ;
     ns:mean_population 52793 ;
     ns:okres okres:CZ0327 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 nsr:observation-075 a qb:Observation ;
     ns:kraj kraj:CZ042 ;
     ns:mean_population 85466 ;
     ns:okres okres:CZ0424 ;
-    qb:dataSet nsr:populationDataCube .
+    qb:dataSet nsr:PopulationDataCube .
 
 ns:kraj a qb:DimensionProperty,
         rdfs:Property ;
@@ -494,16 +494,16 @@ ns:structure a qb:DataStructureDefinition ;
         [ qb:dimension ns:kraj ],
         [ qb:dimension ns:okres ] .
 
-nsr:populationDataCube a qb:DataSet ;
+nsr:PopulationDataCube a qb:DataSet ;
     dct:comment "Střední stav obyvatel, v závislosti na okrese a kraji"@cs,
         "Mean population, depending on the county and region"@en ;
     dct:description "Střední stav obyvatel, v závislosti na okrese a kraji"@cs,
         "Mean population, depending on the county and region"@en ;
-    dct:issued "2023-04-07"^^xsd:date ;
+    dct:issued "2023-04-09"^^xsd:date ;
     dct:label "Střední stav obyvatel okrsků a krajů"@cs,
         "Mean population of czech counties and regions"@en ;
     dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    dct:modified "2023-04-07"^^xsd:date ;
+    dct:modified "2023-04-09"^^xsd:date ;
     dct:publisher nsr:czech_statistical_organization ;
     dct:source "Český statistický úřad"@cs,
         "Czech Statistical Office"@en ;

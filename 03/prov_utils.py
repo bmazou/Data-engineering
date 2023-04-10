@@ -66,8 +66,13 @@ def save_prov_graph(g: Graph):
 
     args = get_args()
     if args.file_name is not None:
+        import os
+        if not os.path.exists("output"):
+            os.makedirs("output")
+        
         output_path = "output/" + args.file_name
         g.serialize(destination=output_path, format="trig")
+        
     else:
         print("File name not specified. Data will not be saved.")
 

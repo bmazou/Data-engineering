@@ -1,5 +1,6 @@
 import csv
 
+
 def load_from_csv(path):
     with open(path, "r", encoding="utf8") as stream:
         reader = csv.reader(stream)

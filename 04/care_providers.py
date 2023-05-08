@@ -1,6 +1,6 @@
 # from validator import Validator
-import care_providers_loader
-import utils
+import my_utils.care_providers_loader as care_providers_loader
+import my_utils.utils as utils
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import QB, RDF, XSD
 
@@ -121,7 +121,7 @@ def save_data_cube(data_cube, path):
 def main():
     data = care_providers_loader.load_data("data/care_providers.csv")
     data_cube = as_data_cube(data)
-    utils.save_data_cube(data_cube, "output/care_providers.ttl")
+    utils.save_data_cube(data_cube, "care_providers.ttl")
     
 if __name__ == "__main__":
     main()

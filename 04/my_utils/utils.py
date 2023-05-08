@@ -1,6 +1,6 @@
 import csv
 
-import population_loader
+from my_utils.population_loader import load_data
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import QB, RDF, XSD
 
@@ -117,12 +117,12 @@ def add_metadata(collector: Graph, data_cube_instance, en_prefLabel, cz_prefLabe
     collector.add((data_cube_instance, DCT.comment, Literal(cz_description, lang="cs")))
     
 
-def save_data_cube(data_cube, path):
+def save_data_cube(data_cube, file_name):
     import os
     if not os.path.exists("output"):
         os.makedirs("output")
     
-    
+    path = "output/" + file_name
     with open(path, "w", encoding="utf8") as f:
         f.write(data_cube.serialize(format="ttl"))
 
@@ -194,7 +194,7 @@ def create_skos_hierarchy(collector: Graph):
         collector.add( ( COUNTRY.CZ, SKOS.prefLabel, Literal("Czech republic", lang="en") ) )
 
     def add_kraj_instances():
-        data = population_loader.load_data("data/pohyb-obyvatel.csv")
+        data = load_data("data/pohyb-obyvatel.csv")
         kraj_okres = get_kraj_okres_dict(data)
         kraj_name = {"CZ020": "Středočeský kraj", "CZ031": "Jihočeský kraj", "CZ032": "Plzeňský kraj", "CZ041": "Karlovarský kraj", "CZ042": "Ústecký kraj", "CZ051": "Liberecký kraj", "CZ052": "Královéhradecký kraj", "CZ053": "Pardubický kraj", "CZ063": "Kraj Vysočina", "CZ064": "Jihomoravský kraj", "CZ071": "Olomoucký kraj", "CZ072": "Zlínský kraj", "CZ080": "Moravskoslezský kraj"}
         for kraj in kraj_okres:

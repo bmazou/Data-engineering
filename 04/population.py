@@ -1,5 +1,5 @@
-import population_loader
-import utils
+import my_utils.population_loader as population_loader
+import my_utils.utils as utils
 from rdflib import BNode, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import QB, RDF, XSD
 
@@ -85,7 +85,7 @@ def as_data_cube(data):
 def main():
     data = population_loader.load_data("data/pohyb-obyvatel.csv")
     data_cube = as_data_cube(data)
-    utils.save_data_cube(data_cube, "output/population.ttl")
+    utils.save_data_cube(data_cube, "population.ttl")
     
 
 if __name__ == "__main__":

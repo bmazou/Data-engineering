@@ -1,0 +1,35 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix nsr: <http://example.org/nsr/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nsr:PopulationDataCube a dcat:Dataset ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/NEVER> ;
+    dct:description "Průměrná populace, v závislosti na okrese a kraji"@cs,
+        "Mean population, depending on the county and region"@en ;
+    dct:keyword "kraje"@cs,
+        "okresy"@cs,
+        "populace"@cs,
+        "Česká republika"@cs,
+        "Czech Republic"@en,
+        "counties"@en,
+        "population"@en,
+        "regions"@en ;
+    dct:label "Průměrná populace českých krajů a okresů"@cs,
+        "Mean population of Czech regions and counties"@en ;
+    dct:publisher nsr:BedrichMazourek ;
+    dct:spatial <http://publications.europa.eu/resource/authority/country/CZE> ;
+    dcat:theme <http://eurovoc.europa.eu/385>,
+        <http://eurovoc.europa.eu/6388> .
+
+nsr:PopulationDataCubeDistribution a dcat:Distribution ;
+    dct:title "Population data cube" ;
+    dcat:accessURL <https://github.com/bmazou/Data-engineering-hw/blob/main/04/output/population.ttl> ;
+    dcat:mediaType <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+
+nsr:BedrichMazourek a foaf:Person ;
+    foaf:homepage "https://github.com/bmazou"^^xsd:anyURI ;
+    foaf:mbox <mailto:codprojmail@gmail.com> ;
+    foaf:name "Bedřich Mazourek"@cs .
+

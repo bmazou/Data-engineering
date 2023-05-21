@@ -1,0 +1,76 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix nsprov: <http://example.org/provenance#> .
+@prefix nsr: <http://example.org/nsr/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:N4211f37a05c440ec9e0fcb0bc1310e3e {
+    <file://../../01/care_providers.py> a prov:Location .
+
+    <file://../../01/data/care_providers.csv> a prov:Location .
+
+    <file://../../01/output/care_providers.ttl> a prov:Location .
+
+    nsr:CareProvidersDataCube a prov:Entity ;
+        skos:definition "Počet daných poskytovatelů péče v jednotlivých okresech a krajích ČR"@cs,
+            "Number of given care providers in each county and region of the Czech republic"@en ;
+        prov:atLocation <file://../../01/output/care_providers.ttl> ;
+        prov:wasAttributedTo nsprov:CareProvidersCreatorAgent ;
+        prov:wasDerivedFrom nsr:CareProvidersDatasetEntity ;
+        prov:wasGeneratedBy nsprov:CareProvidersCreatingActivity .
+
+    nsprov:BedrichMazourek a prov:Agent,
+            prov:Person ;
+        prov:actedOnBehalfOf nsprov:PetrSkoda ;
+        foaf:homepage "https://github.com/bmazou"^^xsd:anyURI ;
+        foaf:mbox <mailto:codprojmail@gmail.com> ;
+        foaf:name "Bedřich Mazourek"@cs .
+
+    nsprov:CareProvidersCreatingActivity a prov:Activity ;
+        prov:endedAtTime "2021-04-09T14:43:00"^^xsd:dateTime ;
+        prov:generated nsr:CareProvidersDataCube ;
+        prov:qualifiedAssociation [ a prov:Association ;
+                rdfs:comment "Python script created the data cube"@en ;
+                prov:agent nsprov:CareProvidersCreatorAgent ;
+                prov:hadRole nsprov:CreatorRole ] ;
+        prov:startedAtTime "2021-04-09T14:42:00"^^xsd:dateTime ;
+        prov:used nsr:CareProvidersDatasetEntity .
+
+    nsprov:CeskyStatistickyUradAgent a prov:Agent,
+            foaf:Organization ;
+        rdfs:seeAlso <https://www.czso.cz/> ;
+        skos:prefLabel "Český statistický úřad"@cs,
+            "Czech Statistical Office"@en .
+
+    nsprov:CreatorRole a prov:Role ;
+        skos:definition "Tvůrce datové kostky"@cs,
+            "Datacube creator"@en .
+
+    nsprov:MatematickoFyzikalniFakulta a prov:Agent,
+            prov:Organization ;
+        foaf:name "Matematicko-fyzikální fakulta Univerzity Karlovy"@cs ;
+        foaf:schoolHomepage "https://www.mff.cuni.cz"^^xsd:anyURI .
+
+    nsprov:PetrSkoda a prov:Agent,
+            prov:Person ;
+        prov:actedOnBehalfOf nsprov:MatematickoFyzikalniFakulta ;
+        foaf:homepage "https://github.com/skodapetr"^^xsd:anyURI ;
+        foaf:mbox <mailto:petr.skoda@matfyz.cuni.cz> ;
+        foaf:name "Petr Skoda"@cs .
+
+    nsr:CareProvidersDatasetEntity a prov:Entity ;
+        rdfs:seeAlso <https://data.gov.cz/datov%C3%A1-sada?iri=https://data.gov.cz/zdroj/datov%C3%A9-sady/https---opendata.mzcr.cz-api-3-action-package_show-id-nrpzs> ;
+        skos:definition "Národní registr poskytovatelů zdravotních služeb"@cs,
+            "National Register of Health Service Providers"@en ;
+        prov:atLocation <file://../../01/data/care_providers.csv> ;
+        prov:wasAttributedTo nsprov:CeskyStatistickyUradAgent .
+
+    nsprov:CareProvidersCreatorAgent a prov:SoftwareAgent ;
+        skos:definition "Skript pro vytvoření datové kostky o poskytovatelích péče"@cs,
+            "Script for creating care providers data cube"@en ;
+        prov:actedOnBehalfOf nsprov:BedrichMazourek ;
+        prov:atLocation <file://../../01/care_providers.py> .
+}
+

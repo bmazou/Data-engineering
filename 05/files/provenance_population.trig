@@ -1,0 +1,86 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix nsprov: <http://example.org/provenance#> .
+@prefix nsr: <http://example.org/nsr/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+_:N527e91d492474fdfad726c495ead7954 {
+    <file://../../01/data/ciselnik-okresu.csv> a prov:Location .
+
+    <file://../../01/data/pohyb-obyvatel.csv> a prov:Location .
+
+    <file://../../01/output/population.ttl> a prov:Location .
+
+    <file://../../01/population.py> a prov:Location .
+
+    nsr:PopulationDataCube a prov:Entity ;
+        skos:definition "Střední stav obyvatel okrsků a krajů v roce 2021"@cs,
+            "Mean population for Czech republic in 2021"@en ;
+        prov:atLocation <file://../../01/output/population.ttl> ;
+        prov:wasAttributedTo nsprov:PopulationCreatorAgent ;
+        prov:wasDerivedFrom nsr:NutsCodesDatasetEntity,
+            nsr:PopulationDatasetEntity ;
+        prov:wasGeneratedBy nsprov:PopulationCreatingActivity .
+
+    nsprov:BedrichMazourek a prov:Agent,
+            prov:Person ;
+        prov:actedOnBehalfOf nsprov:PetrSkoda ;
+        foaf:homepage "https://github.com/bmazou"^^xsd:anyURI ;
+        foaf:mbox <mailto:codprojmail@gmail.com> ;
+        foaf:name "Bedřich Mazourek"@cs .
+
+    nsprov:CreatorRole a prov:Role ;
+        skos:definition "Tvůrce datové kostky"@cs,
+            "Datacube creator"@en .
+
+    nsprov:MatematickoFyzikalniFakulta a prov:Agent,
+            prov:Organization ;
+        foaf:name "Matematicko-fyzikální fakulta Univerzity Karlovy"@cs ;
+        foaf:schoolHomepage "https://www.mff.cuni.cz"^^xsd:anyURI .
+
+    nsprov:PetrSkoda a prov:Agent,
+            prov:Person ;
+        prov:actedOnBehalfOf nsprov:MatematickoFyzikalniFakulta ;
+        foaf:homepage "https://github.com/skodapetr"^^xsd:anyURI ;
+        foaf:mbox <mailto:petr.skoda@matfyz.cuni.cz> ;
+        foaf:name "Petr Skoda"@cs .
+
+    nsprov:PopulationCreatingActivity a prov:Activity ;
+        prov:endedAtTime "2021-04-09T14:41:00"^^xsd:dateTime ;
+        prov:generated nsr:PopulationDataCube ;
+        prov:qualifiedAssociation [ a prov:Association ;
+                rdfs:comment "Python script created the data cube"@en ;
+                prov:agent nsprov:PopulationCreatorAgent ;
+                prov:hadRole nsprov:CreatorRole ] ;
+        prov:startedAtTime "2021-04-09T14:40:00"^^xsd:dateTime ;
+        prov:used nsr:NutsCodesDatasetEntity,
+            nsr:PopulationDatasetEntity .
+
+    nsr:NutsCodesDatasetEntity a prov:Entity ;
+        skos:definition "Kódování okresů a krajů v ČR"@cs,
+            "Coding of counties and regions in Czech republic"@en ;
+        prov:atLocation <file://../../01/data/ciselnik-okresu.csv> ;
+        prov:wasAttributedTo nsprov:CeskyStatistickyUradAgent .
+
+    nsr:PopulationDatasetEntity a prov:Entity ;
+        rdfs:seeAlso <https://data.gov.cz/datov%C3%A1-sada?iri=https%3A%2F%2Fdata.gov.cz%2Fzdroj%2Fdatov%C3%A9-sady%2F00025593%2F12032e1445fd74fa08da79b14137fc29> ;
+        skos:definition "Pohyb obyvatel za ČR, kraje, okresy, SO ORP a obce - rok 2021"@cs,
+            "Population movement for Czech republic, regions, counties, SO ORP and municipalities - year 2021"@en ;
+        prov:atLocation <file://../../01/data/pohyb-obyvatel.csv> ;
+        prov:wasAttributedTo nsprov:CeskyStatistickyUradAgent .
+
+    nsprov:CeskyStatistickyUradAgent a prov:Agent,
+            foaf:Organization ;
+        rdfs:seeAlso <https://www.czso.cz/> ;
+        skos:prefLabel "Český statistický úřad"@cs,
+            "Czech Statistical Office"@en .
+
+    nsprov:PopulationCreatorAgent a prov:SoftwareAgent ;
+        skos:definition "Skript pro vytvoření datové kostky o pohybu obyvatel"@cs,
+            "Script for creating population data cube"@en ;
+        prov:actedOnBehalfOf nsprov:BedrichMazourek ;
+        prov:atLocation <file://../../01/population.py> .
+}
+
